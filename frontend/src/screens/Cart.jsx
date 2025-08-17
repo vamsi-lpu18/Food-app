@@ -8,10 +8,27 @@ export default function Cart() {
   
   if (data.length === 0) {
     return (
-      <div style={{ padding: '20px', minHeight: '100vh' }}>
-        <h2>Your Cart is Empty!</h2>
-        <p>Add some food items to get started.</p>
-        <button onClick={() => window.history.back()}>
+      <div style={{ 
+        padding: '20px', 
+        minHeight: '100vh',
+        backgroundColor: '#f8f9fa',
+        color: '#333',
+        textAlign: 'center'
+      }}>
+        <h2 style={{ color: '#333', marginBottom: '20px' }}>Your Cart is Empty!</h2>
+        <p style={{ color: '#666', marginBottom: '30px' }}>Add some food items to get started.</p>
+        <button 
+          style={{ 
+            background: '#007bff', 
+            color: 'white', 
+            border: 'none', 
+            padding: '12px 24px', 
+            borderRadius: '4px',
+            cursor: 'pointer',
+            fontSize: '16px'
+          }}
+          onClick={() => window.history.back()}
+        >
           Continue Shopping
         </button>
       </div>
@@ -61,19 +78,22 @@ export default function Cart() {
     <div style={{ 
       padding: '20px', 
       minHeight: '100vh',
-      overflow: 'auto'
+      overflow: 'auto',
+      backgroundColor: '#f8f9fa',
+      color: '#333'
     }}>
-      <h1>Shopping Cart</h1>
+      <h1 style={{ color: '#333', marginBottom: '20px' }}>Shopping Cart</h1>
       
       <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
         <div style={{ flex: '2', minWidth: '300px' }}>
-          <h3>Cart Items ({data.length})</h3>
+          <h3 style={{ color: '#333', marginBottom: '15px' }}>Cart Items ({data.length})</h3>
           <div style={{ 
             border: '1px solid #ccc', 
             borderRadius: '8px', 
             padding: '20px',
             maxHeight: '60vh',
-            overflowY: 'auto'
+            overflowY: 'auto',
+            backgroundColor: 'white'
           }}>
             {data.map((food, index) => (
               <div key={index} style={{ 
@@ -89,7 +109,7 @@ export default function Cart() {
                   style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '4px' }}
                 />
                 <div style={{ flex: '1' }}>
-                  <h4 style={{ margin: '0 0 5px 0' }}>{food.name}</h4>
+                  <h4 style={{ margin: '0 0 5px 0', color: '#333' }}>{food.name}</h4>
                   <p style={{ margin: '0 0 5px 0', color: '#666' }}>{food.description}</p>
                   <span style={{ 
                     background: '#f0f0f0', 
@@ -102,11 +122,11 @@ export default function Cart() {
                     {food.size}
                   </span>
                 </div>
-                <div style={{ textAlign: 'center', minWidth: '60px',text:"black" }}>
-                  <strong className='text-danger'>Qty: {food.quant}</strong>
+                <div style={{ textAlign: 'center', minWidth: '60px' }}>
+                  <strong style={{ color: '#dc3545' }}>Qty: {food.quant}</strong>
                 </div>
                 <div style={{ textAlign: 'center', minWidth: '80px' }}>
-                  <strong>₹{food.price}</strong>
+                  <strong style={{ color: '#333' }}>₹{food.price}</strong>
                 </div>
                 <button 
                   style={{ 
@@ -127,23 +147,23 @@ export default function Cart() {
         </div>
         
         <div style={{ flex: '1', minWidth: '250px' }}>
-          <h3>Order Summary</h3>
-          <div style={{ border: '1px solid #ccc', borderRadius: '8px', padding: '20px' }}>
+          <h3 style={{ color: '#333', marginBottom: '15px' }}>Order Summary</h3>
+          <div style={{ border: '1px solid #ccc', borderRadius: '8px', padding: '20px', backgroundColor: 'white' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-              <span>Items:</span>
-              <span>{data.length}</span>
+              <span style={{ color: '#333' }}>Items:</span>
+              <span style={{ color: '#333' }}>{data.length}</span>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-              <span>Subtotal:</span>
-              <span>₹{totalPrice}</span>
+              <span style={{ color: '#333' }}>Subtotal:</span>
+              <span style={{ color: '#333' }}>₹{totalPrice}</span>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-              <span>Delivery:</span>
+              <span style={{ color: '#333' }}>Delivery:</span>
               <span style={{ color: 'green' }}>Free</span>
             </div>
             <hr style={{ margin: '15px 0' }} />
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
-              <strong>Total:</strong>
+              <strong style={{ color: '#333' }}>Total:</strong>
               <strong style={{ color: 'green', fontSize: '18px' }}>₹{totalPrice}</strong>
             </div>
             <button 
