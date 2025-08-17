@@ -1,0 +1,15 @@
+/* Custom carousel styles */
+.carousel-item img {
+  height: 500px; /* Set desired height */
+  object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.carousel-caption {
+  bottom: 40%; /* move upward */
+}
+
+/* Basic page scrolling */
+html, body {
+  overflow-y: auto;
+  height: auto;
+}
