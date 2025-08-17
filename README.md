@@ -9,7 +9,7 @@
 
 A modern, full-stack food delivery web application built with React and Node.js, featuring user authentication, real-time cart management, and order processing.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GoFood%20App-brightgreen?style=for-the-badge)](https://gofood-frontend.onrender.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GoFood%20App-brightgreen?style=for-the-badge)](https://food-app-front-end.onrender.com/)
 [![API Status](https://img.shields.io/badge/API-Status%20Online-green?style=for-the-badge)](https://go-food-backend-w4p1.onrender.com/health)
 
 </div>
