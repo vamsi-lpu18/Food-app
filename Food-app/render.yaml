@@ -3,7 +3,7 @@ services:
     name: gofood-backend
     env: node
     plan: free
-    buildCommand: cd Backend && npm install
+    buildCommand: npm install
     startCommand: cd Backend && npm start
     envVars:
       - key: NODE_ENV
@@ -11,7 +11,7 @@ services:
       - key: MONGODB_URI
         value: mongodb+srv://vamsi:80p448cgte@cluster0.8tymqsr.mongodb.net/GoFood?retryWrites=true&w=majority
       - key: JWT_SECRET
-        value: your_secret_key_here
+        value: gofood_secret_key_2024_secure_jwt_token
       - key: PORT
         value: 10000
 
