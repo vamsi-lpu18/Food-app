@@ -24,7 +24,7 @@ A modern, full-stack food delivery web application built with React and Node.js,
 
 | 🖥️ **Frontend Application** | 🔧 **Backend API** |
 |:---:|:---:|
-| [![Frontend](https://img.shields.io/badge/Frontend-GoFood%20App-61DAFB?style=for-the-badge&logo=react)](https://gofood-frontend.onrender.com) | [![Backend](https://img.shields.io/badge/Backend-API%20Server-green?style=for-the-badge&logo=node.js)](https://go-food-backend-w4p1.onrender.com) |
+| [![Frontend](https://img.shields.io/badge/Frontend-GoFood%20App-61DAFB?style=for-the-badge&logo=react)](https://food-app-front-end.onrender.com/) | [![Backend](https://img.shields.io/badge/Backend-API%20Server-green?style=for-the-badge&logo=node.js)](https://go-food-backend-w4p1.onrender.com) |
 
 </div>
 
