@@ -3,6 +3,7 @@ services:
     name: gofood-backend
     env: node
     plan: free
+    rootDir: .
     buildCommand: npm install
     startCommand: cd Backend && npm start
     envVars:
@@ -19,6 +20,7 @@ services:
     name: gofood-frontend
     env: static
     plan: free
+    rootDir: .
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     envVars:
