@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: gofood-backend
+    env: node
+    plan: free
+    buildCommand: cd Backend && npm install
+    startCommand: cd Backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        value: mongodb+srv://vamsi:80p448cgte@cluster0.8tymqsr.mongodb.net/GoFood?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        value: your_secret_key_here
+      - key: PORT
+        value: 10000
+
+  - type: web
+    name: gofood-frontend
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://gofood-backend.onrender.com

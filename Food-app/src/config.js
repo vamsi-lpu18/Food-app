@@ -2,7 +2,7 @@
 const config = {
   // API base URL - will be different for development and production
   API_BASE_URL: process.env.NODE_ENV === 'production' 
-    ? (process.env.REACT_APP_API_URL || window.location.origin) // Use environment variable or same origin
+    ? (process.env.REACT_APP_API_URL || 'https://gofood-backend.onrender.com') // Use environment variable or Render backend URL
     : 'http://localhost:5000', // Use localhost in development
   
   // Individual API endpoints

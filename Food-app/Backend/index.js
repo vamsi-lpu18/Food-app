@@ -10,7 +10,7 @@ mongoDB();
 // CORS configuration
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
-    ? process.env.CORS_ORIGIN || '*' 
+    ? ['https://gofood-frontend.onrender.com', 'http://localhost:3000'] 
     : ['http://localhost:3000', 'http://localhost:5173'],
   credentials: true,
   optionsSuccessStatus: 200
