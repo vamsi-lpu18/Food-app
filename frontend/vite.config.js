@@ -12,7 +12,7 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          bootstrap: ['bootstrap', 'bootstrap-dark-5']
+          bootstrap: ['bootstrap']
         }
       }
     }
