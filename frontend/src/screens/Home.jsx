@@ -17,25 +17,34 @@ const Home = () => {
       setLoading(true);
       setError(null);
       
-      let response = await fetch(getApiUrl('/api/DisplayData'), {
+      const apiUrl = getApiUrl('/api/DisplayData');
+      console.log("Making API call to:", apiUrl);
+      
+      let response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
-        }
+        },
+        mode: 'cors'
       });
       
+      console.log("Response status:", response.status);
+      console.log("Response headers:", response.headers);
+      
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        const errorText = await response.text();
+        console.error("Response error:", errorText);
+        throw new Error(`Network response was not ok: ${response.status} ${errorText}`);
       }
       
-      response = await response.json();
-      setData(response[0] || []);
-      setCat(response[1] || []);
-      console.log("Food items:", response[0]);
-      console.log("Categories:", response[1]);
+      const responseData = await response.json();
+      setData(responseData[0] || []);
+      setCat(responseData[1] || []);
+      console.log("Food items:", responseData[0]);
+      console.log("Categories:", responseData[1]);
     } catch (error) {
       console.error("Error fetching data:", error);
-      setError("Failed to load data. Please check if the backend server is running.");
+      setError(`Failed to load data: ${error.message}`);
       // Set some fallback data to prevent blank page
       setData([]);
       setCat([]);
